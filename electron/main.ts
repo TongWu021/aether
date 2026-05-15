@@ -9,6 +9,7 @@ import { registerExcelIpc } from './ipc/excel.ipc'
 import { registerFileIpc } from './ipc/file.ipc'
 import { registerMemoryIpc } from './ipc/memory.ipc'
 import { registerMemoIpc } from './ipc/memo.ipc'
+import { registerVersionIpc } from './ipc/version.ipc'
 import { initAnnotationStore } from './services/annotation-store'
 import { initMemoStore } from './services/memo-store'
 
@@ -125,6 +126,7 @@ app.whenReady().then(() => {
   registerMemoryIpc()
   registerMemoIpc()
   registerExcelIpc()
+  registerVersionIpc()
   showMainWindow()
 
   app.on('activate', () => {

@@ -10,6 +10,7 @@ import { DetailPanel } from './components/sidebar/DetailPanel'
 import { Icon } from './components/shared/Icon'
 import { Sidebar, type AppModule } from './components/sidebar/Sidebar'
 import { ToastProvider, useToast } from './components/shared/Toast'
+import { UpdateBanner } from './components/shared/UpdateBanner'
 import { useAnnotations } from './hooks/useAnnotations'
 import { useFileMemo } from './hooks/useMemo'
 import { useFileTree } from './hooks/useFileTree'
@@ -659,6 +660,7 @@ function AppContent(): React.JSX.Element {
 
   return (
     <CockpitLayout
+      banner={<UpdateBanner />}
       topBar={
         <div className="grid h-full grid-cols-[168px_minmax(0,1fr)_168px] items-center gap-4 px-4">
           <BrandWordmark />

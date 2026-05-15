@@ -98,5 +98,9 @@ contextBridge.exposeInMainWorld('electronAPI', {
     selectBackupDir: () => ipcRenderer.invoke('excel:select-backup-dir'),
     migrateBackupDir: (fromDir: string, toDir: string) =>
       ipcRenderer.invoke('excel:migrate-backup-dir', fromDir, toDir)
+  },
+  version: {
+    current: (): Promise<string> => ipcRenderer.invoke('version:current'),
+    checkLatest: () => ipcRenderer.invoke('version:check-latest')
   }
 })

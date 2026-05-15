@@ -117,6 +117,22 @@ interface ExcelAPI {
   ) => Promise<IpcResult<{ readonly migrated: true }>>
 }
 
+interface UpdateCheckData {
+  readonly hasUpdate: boolean
+  readonly currentVersion: string
+  readonly latestVersion: string | null
+  readonly releaseUrl: string | null
+  readonly publishedAt: string | null
+}
+
+interface VersionAPI {
+  current: () => Promise<string>
+  checkLatest: () => Promise<
+    | { readonly success: true; readonly data: UpdateCheckData }
+    | { readonly success: false; readonly error: string }
+  >
+}
+
 interface ElectronAPI {
   file: FileAPI
   config: ConfigAPI
@@ -126,6 +142,7 @@ interface ElectronAPI {
   annotation: AnnotationAPI
   memo: MemoAPI
   excel: ExcelAPI
+  version: VersionAPI
 }
 
 declare global {

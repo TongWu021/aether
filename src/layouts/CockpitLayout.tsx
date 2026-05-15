@@ -4,6 +4,7 @@ interface CockpitLayoutProps {
   readonly main: React.ReactNode
   readonly detail: React.ReactNode | null
   readonly statusBar: React.ReactNode
+  readonly banner?: React.ReactNode
 }
 
 export function CockpitLayout({
@@ -11,10 +12,12 @@ export function CockpitLayout({
   sidebar,
   main,
   detail,
-  statusBar
+  statusBar,
+  banner
 }: CockpitLayoutProps): React.JSX.Element {
   return (
     <div className="flex h-screen flex-col bg-canvas">
+      {banner ? <div className="shrink-0">{banner}</div> : null}
       <header className="relative z-30 shrink-0 bg-canvas/96 backdrop-blur-sm" style={{ height: 52 }}>
         {topBar}
       </header>
