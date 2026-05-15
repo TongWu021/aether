@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <!-- Variant C: Layered — 加折线暗示开口深度 -->
+  <!-- 主轮廓 -->
+  <path
+    d="M 4.1 19 C 4 15.5 4.2 10.5 4 6.2 Q 4 5 5.2 5 L 9.1 5.1 L 10.7 8 C 13 8.1 16 7.9 19 8 Q 20 8 20 9 C 20.1 13 19.9 16 20 19 Q 20 20 19 20 C 14.5 20.1 9 19.9 5.1 20 Q 4 20 4.1 19 Z"
+    stroke="#0A0A0A"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- 折线：暗示文件夹的前面板边缘 -->
+  <path
+    d="M 4.2 10.5 C 8 10.4 15 10.6 19.8 10.5"
+    stroke="#0A0A0A"
+    stroke-width="1.2"
+    stroke-linecap="round"
+  />
+</svg>

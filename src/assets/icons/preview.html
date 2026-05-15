@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Aether Icon Preview — folder-closed</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'SF Pro Text', -apple-system, sans-serif;
+      background: #FAFAF9;
+      color: #0A0A0A;
+      padding: 48px;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 40px;
+    }
+    .size-group {
+      margin-bottom: 48px;
+    }
+    .size-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .variants {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .variant {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed #DDD;
+      border-radius: 4px;
+      background: #FFF;
+    }
+    .icon-box.size-24 { width: 48px; height: 48px; }
+    .icon-box.size-16 { width: 32px; height: 32px; }
+    .icon-box img.size-24 { width: 24px; height: 24px; }
+    .icon-box img.size-16 { width: 16px; height: 16px; }
+    .label {
+      font-size: 11px;
+      color: #666;
+      text-align: center;
+      max-width: 120px;
+      line-height: 1.4;
+    }
+    .label strong {
+      display: block;
+      font-size: 13px;
+      color: #0A0A0A;
+      margin-bottom: 2px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #EEE;
+      margin: 32px 0;
+    }
+    /* Dark mode preview */
+    .dark-section {
+      background: #0A0A0A;
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 24px;
+    }
+    .dark-section .size-label { color: #666; }
+    .dark-section .icon-box {
+      background: #1A1A1A;
+      border-color: #333;
+    }
+    .dark-section .icon-box img { filter: invert(1); }
+    .dark-section .label { color: #888; }
+    .dark-section .label strong { color: #EEE; }
+
+    /* File tree simulation */
+    .tree-sim {
+      margin-top: 48px;
+      padding: 24px;
+      background: #FFF;
+      border: 1px solid #EEE;
+      border-radius: 8px;
+      max-width: 280px;
+    }
+    .tree-sim h3 {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .tree-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0;
+      font-size: 13px;
+      color: #333;
+    }
+    .tree-item img { width: 16px; height: 16px; }
+    .tree-item.indent { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <h1>folder-closed — 4 Variants</h1>
+  <p class="subtitle">手绘线稿风格 · 从最精简到最多细节 · Aether Design System</p>
+
+  <!-- 24px Preview -->
+  <div class="size-group">
+    <div class="size-label">24 × 24 px（标准尺寸）</div>
+    <div class="variants">
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-a.svg" alt="A">
+        </div>
+        <div class="label">
+          <strong>A · 极简</strong>
+          单一轮廓，最少笔画<br>小标签页直连主体
+        </div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-b.svg" alt="B">
+        </div>
+        <div class="label">
+          <strong>B · 经典</strong>
+          更明确的折角标签<br>两段式过渡
+        </div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-c.svg" alt="C">
+        </div>
+        <div class="label">
+          <strong>C · 有层次</strong>
+          加一条水平折线<br>暗示开口深度
+        </div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-d.svg" alt="D">
+        </div>
+        <div class="label">
+          <strong>D · 建筑师草图</strong>
+          折线 + 标签标注线<br>最丰富的手绘细节
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 16px Preview -->
+  <div class="size-group">
+    <div class="size-label">16 × 16 px（文件树列表尺寸）</div>
+    <div class="variants">
+      <div class="variant">
+        <div class="icon-box size-16">
+          <img class="size-16" src="folder-closed-a.svg" alt="A">
+        </div>
+        <div class="label"><strong>A</strong></div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-16">
+          <img class="size-16" src="folder-closed-b.svg" alt="B">
+        </div>
+        <div class="label"><strong>B</strong></div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-16">
+          <img class="size-16" src="folder-closed-c.svg" alt="C">
+        </div>
+        <div class="label"><strong>C</strong></div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-16">
+          <img class="size-16" src="folder-closed-d.svg" alt="D">
+        </div>
+        <div class="label"><strong>D</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Dark Mode -->
+  <div class="dark-section">
+    <div class="size-label">Dark Mode 预览（反色）</div>
+    <div class="variants">
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-a.svg" alt="A">
+        </div>
+        <div class="label"><strong>A</strong></div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-b.svg" alt="B">
+        </div>
+        <div class="label"><strong>B</strong></div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-c.svg" alt="C">
+        </div>
+        <div class="label"><strong>C</strong></div>
+      </div>
+      <div class="variant">
+        <div class="icon-box size-24">
+          <img class="size-24" src="folder-closed-d.svg" alt="D">
+        </div>
+        <div class="label"><strong>D</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- File Tree Simulation -->
+  <div class="tree-sim" id="tree-a">
+    <h3>模拟文件树（使用 Variant A）</h3>
+    <div class="tree-item">
+      <img src="folder-closed-a.svg" alt=""> Aether
+    </div>
+    <div class="tree-item indent">
+      <img src="folder-closed-a.svg" alt=""> components
+    </div>
+    <div class="tree-item indent">
+      <img src="folder-closed-a.svg" alt=""> hooks
+    </div>
+    <div class="tree-item indent">
+      <img src="folder-closed-a.svg" alt=""> stores
+    </div>
+  </div>
+
+  <div class="tree-sim" id="tree-c">
+    <h3>模拟文件树（使用 Variant C）</h3>
+    <div class="tree-item">
+      <img src="folder-closed-c.svg" alt=""> Aether
+    </div>
+    <div class="tree-item indent">
+      <img src="folder-closed-c.svg" alt=""> components
+    </div>
+    <div class="tree-item indent">
+      <img src="folder-closed-c.svg" alt=""> hooks
+    </div>
+    <div class="tree-item indent">
+      <img src="folder-closed-c.svg" alt=""> stores
+    </div>
+  </div>
+
+</body>
+</html>
