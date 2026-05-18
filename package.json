@@ -1,6 +1,6 @@
 {
   "name": "ai-pm-cockpit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Aether - AI PM Cockpit",
   "main": "./out/main/index.js",
   "author": "TongWu021",
