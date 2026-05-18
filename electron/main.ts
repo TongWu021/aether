@@ -72,6 +72,20 @@ function createMainWindow(): BrowserWindow {
 
   window.webContents.on('render-process-gone', (_event, details) => {
     console.error('Renderer process gone:', details)
+    if (details.reason !== 'clean-exit' && !window.isDestroyed()) {
+      setTimeout(() => {
+        if (!window.isDestroyed()) {
+          window.webContents.reload()
+        }
+      }, 200)
+    }
+  })
+
+  window.on('unresponsive', () => {
+    console.warn('Window unresponsive — will reload')
+    if (!window.isDestroyed()) {
+      window.webContents.reload()
+    }
   })
 
   window.on('closed', () => {

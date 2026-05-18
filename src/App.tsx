@@ -7,6 +7,7 @@ import { FileTree } from './components/file-tree/FileTree'
 import { MemoryPanel } from './components/memory/MemoryPanel'
 import { SettingsPanel } from './components/settings/SettingsPanel'
 import { DetailPanel } from './components/sidebar/DetailPanel'
+import { ErrorBoundary } from './components/shared/ErrorBoundary'
 import { Icon } from './components/shared/Icon'
 import { Sidebar, type AppModule } from './components/sidebar/Sidebar'
 import { ToastProvider, useToast } from './components/shared/Toast'
@@ -781,7 +782,13 @@ function AppContent(): React.JSX.Element {
 }
 
 function App(): React.JSX.Element {
-  return <ToastProvider><AppContent /></ToastProvider>
+  return (
+    <ToastProvider>
+      <ErrorBoundary>
+        <AppContent />
+      </ErrorBoundary>
+    </ToastProvider>
+  )
 }
 
 function BrandWordmark(): React.JSX.Element {
