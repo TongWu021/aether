@@ -91,6 +91,7 @@ export function MarkdownViewer({
   return (
     <div>
       <div
+        key={filePath ?? ''}
         ref={markdownBodyRef}
         className={['markdown-body', className ?? ''].join(' ').trim()}
         style={maxWidth ? { maxWidth } : undefined}
